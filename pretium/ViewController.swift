@@ -22,6 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 imagePicker.cameraCaptureMode = .Photo
                 imagePicker.delegate = self
                 presentViewController(imagePicker, animated: true, completion: {})
+                self.view.addSubview(UIActivityIndicatorView())
             } else {
                 print("Cannot access rear camera")
             }
