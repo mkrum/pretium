@@ -32,13 +32,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("Got an image")
-        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            let selectorToCall = Selector("image:didFinishSavingWithError:contextInfo:")
-            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
+        var newImage: UIImage
+        if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            newImage = possibleImage
+        } else {
+            print("Error")
+            return
         }
+        
+        let imageName = NSUUID().UUIDString
+        let imagePath = getDocumentsDirectory().stringByAppendingPathComponent(imageName)
+        
+        if let jpegData = UIImageJPEGRepresentation(newImage, 80){
+            jpegData.writeToFile(imagePath, atomically: true)
+        }
+        print(imagePath)
         imagePicker.dismissViewControllerAnimated(true, completion: {
             // Anything you want to happen when the user saves an image
         })
+    }
+    
+    func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
