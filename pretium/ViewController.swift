@@ -52,8 +52,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepare for segue")
         if (segue.identifier=="showPrices"){
-            if let myTableViewController = segue.destinationViewController as? myTableViewController {
+            let navigationController=segue.destinationViewController as! UINavigationController
+            if let myTableViewController = navigationController.viewControllers[0] as? myTableViewController {
                 myTableViewController.prices=prices
+                print(prices)
             }
         }
     }
