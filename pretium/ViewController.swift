@@ -106,9 +106,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let arr = cleanerMess.characters.split{$0 == " "}.map(String.init)
         for str in arr{
             if str.rangeOfString(".") != nil{
-               
+                let splitStr = str.characters.split{$0 == "."}.map(String.init)
+                if (splitStr[1].characters.count != 2){
                     prices.append(str)
-
+                }
             }
         }
         return prices
