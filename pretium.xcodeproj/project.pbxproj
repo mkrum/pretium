@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37F2D33A1C7824620000F725 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2D3391C7824620000F725 /* CameraViewController.swift */; };
 		38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82BE1C781FE0001C1104 /* AppDelegate.swift */; };
 		38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82C01C781FE0001C1104 /* ViewController.swift */; };
 		38DD82C41C781FE0001C1104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82C21C781FE0001C1104 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37F2D3391C7824620000F725 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		38DD82BB1C781FE0001C1104 /* pretium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pretium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD82BE1C781FE0001C1104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38DD82C01C781FE0001C1104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				38DD82BE1C781FE0001C1104 /* AppDelegate.swift */,
 				38DD82C01C781FE0001C1104 /* ViewController.swift */,
+				37F2D3391C7824620000F725 /* CameraViewController.swift */,
 				38DD82C21C781FE0001C1104 /* Main.storyboard */,
 				38DD82C81C781FE0001C1104 /* Assets.xcassets */,
 				38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */,
+				37F2D33A1C7824620000F725 /* CameraViewController.swift in Sources */,
 				38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
 			);
@@ -491,6 +495,7 @@
 				38DD82E81C781FE0001C1104 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38DD82E91C781FE0001C1104 /* Build configuration list for PBXNativeTarget "pretiumTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				38DD82EB1C781FE0001C1104 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38DD82EC1C781FE0001C1104 /* Build configuration list for PBXNativeTarget "pretiumUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +513,7 @@
 				38DD82EE1C781FE0001C1104 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
