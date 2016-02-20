@@ -107,8 +107,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         for str in arr{
             if str.rangeOfString(".") != nil{
                 let splitStr = str.characters.split{$0 == "."}.map(String.init)
-                if (splitStr[1].characters.count != 2){
-                    prices.append(str)
+                if (splitStr.count == 2){
+                    if (splitStr[1].characters.count == 2){
+                        prices.append(str)
+                    }
                 }
             }
         }
