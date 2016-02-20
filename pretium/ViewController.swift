@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var prices: [String] = []
+    var didTakePicture: Bool = false
     
     @IBOutlet weak var currentImage: UIImageView!
     
@@ -43,8 +44,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return
         }
         
-        imagePicker.dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user saves an image
+        dismissViewControllerAnimated(true, completion: {
+            self.performSegueWithIdentifier("showPrices", sender: nil)
         })
     }
     
@@ -56,9 +57,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         print("User canceled image")
-        dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user selects cancel
-        })
     }
     
     func readText(image:UIImage){
@@ -115,12 +113,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        takePicture()
+        if(didTakePicture == false) {
+            takePicture()
+            didTakePicture = true
+        }
     }
     
     override func didReceiveMemoryWarning() {
