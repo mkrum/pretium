@@ -35,14 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
-            let actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
-            actInd.center = self.view.center
-            actInd.hidesWhenStopped = true
-            actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-            view.addSubview(actInd)
-            actInd.startAnimating()
-            readText(scaleImage(newImage, maxDimension: 640))
-            actInd.stopAnimating()
+            var prices = [String]()
+            prices = readText(scaleImage(newImage, maxDimension: 640))
         } else {
             print("Error")
             return
@@ -73,7 +67,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         })
     }
     
-    func readText(image:UIImage){
+    func readText(image:UIImage) -> [String]{
         let tesseract = G8Tesseract()
         tesseract.language = "eng"
         tesseract.engineMode = .TesseractCubeCombined
@@ -81,7 +75,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         tesseract.maximumRecognitionTime = 60.0
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
-        print(cleanString(tesseract.recognizedText))
+        return cleanString(tesseract.recognizedText)
     }
     
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
