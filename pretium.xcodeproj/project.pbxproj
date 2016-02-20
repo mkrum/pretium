@@ -15,6 +15,10 @@
 		38DD82CC1C781FE0001C1104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */; };
 		38DD82D71C781FE0001C1104 /* pretiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82D61C781FE0001C1104 /* pretiumTests.swift */; };
 		38DD82E21C781FE0001C1104 /* pretiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82E11C781FE0001C1104 /* pretiumUITests.swift */; };
+		38DD82F01C78DFD2001C1104 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82EF1C78DFD2001C1104 /* TesseractOCR.framework */; };
+		38DD82F21C78E053001C1104 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82F11C78E053001C1104 /* tessdata */; };
+		38DD82F41C78E06C001C1104 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82F31C78E06C001C1104 /* CoreImage.framework */; };
+		38DD82F61C78E0C8001C1104 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,11 @@
 		38DD82DD1C781FE0001C1104 /* pretiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pretiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD82E11C781FE0001C1104 /* pretiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pretiumUITests.swift; sourceTree = "<group>"; };
 		38DD82E31C781FE0001C1104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38DD82EF1C78DFD2001C1104 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = pretium/TesseractOCR.framework; sourceTree = "<group>"; };
+		38DD82F11C78E053001C1104 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		38DD82F31C78E06C001C1104 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		38DD82F71C78E177001C1104 /* pretium-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pretium-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DD82F61C78E0C8001C1104 /* libstdc++.6.0.9.tbd in Frameworks */,
+				38DD82F41C78E06C001C1104 /* CoreImage.framework in Frameworks */,
+				38DD82F01C78DFD2001C1104 /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +91,14 @@
 		38DD82B21C781FE0001C1104 = {
 			isa = PBXGroup;
 			children = (
+				38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */,
+				38DD82F31C78E06C001C1104 /* CoreImage.framework */,
+				38DD82EF1C78DFD2001C1104 /* TesseractOCR.framework */,
 				38DD82BD1C781FE0001C1104 /* pretium */,
 				38DD82D51C781FE0001C1104 /* pretiumTests */,
 				38DD82E01C781FE0001C1104 /* pretiumUITests */,
 				38DD82BC1C781FE0001C1104 /* Products */,
+				38DD82F71C78E177001C1104 /* pretium-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,7 @@
 		38DD82BD1C781FE0001C1104 /* pretium */ = {
 			isa = PBXGroup;
 			children = (
+				38DD82F11C78E053001C1104 /* tessdata */,
 				38DD82BE1C781FE0001C1104 /* AppDelegate.swift */,
 				38DD82C01C781FE0001C1104 /* ViewController.swift */,
 				38DD82C21C781FE0001C1104 /* Main.storyboard */,
@@ -236,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DD82CC1C781FE0001C1104 /* LaunchScreen.storyboard in Resources */,
+				38DD82F21C78E053001C1104 /* tessdata in Resources */,
 				38DD82C91C781FE0001C1104 /* Assets.xcassets in Resources */,
 				38DD82C41C781FE0001C1104 /* Main.storyboard in Resources */,
 			);
@@ -406,13 +424,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pretium",
+				);
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = me.dankerrigan.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -420,13 +448,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pretium",
+				);
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = me.dankerrigan.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
 			};
 			name = Release;
 		};

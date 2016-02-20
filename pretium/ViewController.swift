@@ -35,6 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
+            readText(newImage)
         } else {
             print("Error")
             return
@@ -63,6 +64,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismissViewControllerAnimated(true, completion: {
             // Anything you want to happen when the user selects cancel
         })
+    }
+    
+    func readText(image:UIImage){
+        let tesseract = G8Tesseract()
+        tesseract.language = "eng+fra"
+        tesseract.engineMode = .TesseractCubeCombined
+        tesseract.pageSegmentationMode = .Auto
+        tesseract.maximumRecognitionTime = 60.0
+        tesseract.image = image.g8_blackAndWhite()
+        tesseract.recognize()
+        print(tesseract.recognizedText)
     }
     
     func cleanString(mess: String)-> [String] {
