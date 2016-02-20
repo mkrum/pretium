@@ -42,13 +42,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return
         }
         
-//        let imageName = NSUUID().UUIDString
-//        let imagePath = getDocumentsDirectory().stringByAppendingPathComponent(imageName)
-//        
-//        if let jpegData = UIImageJPEGRepresentation(newImage, 80){
-//            jpegData.writeToFile(imagePath, atomically: true)
-//        }
-        
         imagePicker.dismissViewControllerAnimated(true, completion: {
             // Anything you want to happen when the user saves an image
         })
