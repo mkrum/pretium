@@ -104,11 +104,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var prices = [String]()
         let cleanerMess = mess.stringByReplacingOccurrencesOfString("\n", withString: " ")
         let arr = cleanerMess.characters.split{$0 == " "}.map(String.init)
-        for i in 0 ... arr.count{
-            if arr[i].rangeOfString(".") != nil{
-                let valCheck = arr[i].characters.split{$0 == "."}.map(String.init)
+        for str in arr{
+            if str.rangeOfString(".") != nil{
+                let valCheck = str.characters.split{$0 == "."}.map(String.init)
                 if valCheck[1].characters.count != 2{
-                    prices.append(arr[i])
+                    prices.append(str)
                 }
             }
         }
