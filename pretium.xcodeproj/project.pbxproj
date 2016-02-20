@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82BE1C781FE0001C1104 /* AppDelegate.swift */; };
-		38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82C01C781FE0001C1104 /* ViewController.swift */; };
-		38DD82C41C781FE0001C1104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82C21C781FE0001C1104 /* Main.storyboard */; };
+		38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */; };
+		38B78E281C79077800DAB0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B78E201C79077800DAB0C2 /* Main.storyboard */; };
+		38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E221C79077800DAB0C2 /* myTableViewCell.swift */; };
+		38B78E2A1C79077800DAB0C2 /* myTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E231C79077800DAB0C2 /* myTableViewController.swift */; };
+		38B78E2B1C79077800DAB0C2 /* totalUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E241C79077800DAB0C2 /* totalUpViewController.swift */; };
+		38B78E2C1C79077800DAB0C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E251C79077800DAB0C2 /* ViewController.swift */; };
 		38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82C51C781FE0001C1104 /* pretium.xcdatamodeld */; };
 		38DD82C91C781FE0001C1104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82C81C781FE0001C1104 /* Assets.xcassets */; };
 		38DD82CC1C781FE0001C1104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */; };
@@ -19,9 +22,6 @@
 		38DD82F21C78E053001C1104 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82F11C78E053001C1104 /* tessdata */; };
 		38DD82F41C78E06C001C1104 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82F31C78E06C001C1104 /* CoreImage.framework */; };
 		38DD82F61C78E0C8001C1104 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */; };
-		38DD82FE1C790294001C1104 /* totalUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82FA1C790294001C1104 /* totalUpViewController.swift */; };
-		38DD82FF1C790294001C1104 /* myTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82FB1C790294001C1104 /* myTableViewController.swift */; };
-		38DD83001C790294001C1104 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82FC1C790294001C1104 /* myTableViewCell.swift */; };
 		38DD83011C790294001C1104 /* pretiumTestSave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82FD1C790294001C1104 /* pretiumTestSave.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38B78E211C79077800DAB0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = pretium/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38B78E221C79077800DAB0C2 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = ../myTableViewCell.swift; sourceTree = "<group>"; };
+		38B78E231C79077800DAB0C2 /* myTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewController.swift; path = ../myTableViewController.swift; sourceTree = "<group>"; };
+		38B78E241C79077800DAB0C2 /* totalUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = totalUpViewController.swift; path = ../totalUpViewController.swift; sourceTree = "<group>"; };
+		38B78E251C79077800DAB0C2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38DD82BB1C781FE0001C1104 /* pretium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pretium.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		38DD82BE1C781FE0001C1104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38DD82C01C781FE0001C1104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38DD82C31C781FE0001C1104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38DD82C61C781FE0001C1104 /* pretium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pretium.xcdatamodel; sourceTree = "<group>"; };
 		38DD82C81C781FE0001C1104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38DD82CB1C781FE0001C1104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,9 +65,6 @@
 		38DD82F31C78E06C001C1104 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		38DD82F71C78E177001C1104 /* pretium-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pretium-Bridging-Header.h"; sourceTree = "<group>"; };
-		38DD82FA1C790294001C1104 /* totalUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = totalUpViewController.swift; path = ../../../../Downloads/totalUpViewController.swift; sourceTree = "<group>"; };
-		38DD82FB1C790294001C1104 /* myTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewController.swift; path = ../../../../Downloads/myTableViewController.swift; sourceTree = "<group>"; };
-		38DD82FC1C790294001C1104 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = ../../../../Downloads/myTableViewCell.swift; sourceTree = "<group>"; };
 		38DD82FD1C790294001C1104 /* pretiumTestSave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = pretiumTestSave.storyboard; path = ../../../../Downloads/pretiumTestSave.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,13 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				38DD82F11C78E053001C1104 /* tessdata */,
-				38DD82BE1C781FE0001C1104 /* AppDelegate.swift */,
-				38DD82C01C781FE0001C1104 /* ViewController.swift */,
-				38DD82FA1C790294001C1104 /* totalUpViewController.swift */,
-				38DD82FB1C790294001C1104 /* myTableViewController.swift */,
-				38DD82FC1C790294001C1104 /* myTableViewCell.swift */,
 				38DD82FD1C790294001C1104 /* pretiumTestSave.storyboard */,
-				38DD82C21C781FE0001C1104 /* Main.storyboard */,
+				38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */,
+				38B78E201C79077800DAB0C2 /* Main.storyboard */,
+				38B78E221C79077800DAB0C2 /* myTableViewCell.swift */,
+				38B78E231C79077800DAB0C2 /* myTableViewController.swift */,
+				38B78E241C79077800DAB0C2 /* totalUpViewController.swift */,
+				38B78E251C79077800DAB0C2 /* ViewController.swift */,
 				38DD82C81C781FE0001C1104 /* Assets.xcassets */,
 				38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */,
 				38DD82CD1C781FE0001C1104 /* Info.plist */,
@@ -266,9 +266,9 @@
 			files = (
 				38DD83011C790294001C1104 /* pretiumTestSave.storyboard in Resources */,
 				38DD82CC1C781FE0001C1104 /* LaunchScreen.storyboard in Resources */,
+				38B78E281C79077800DAB0C2 /* Main.storyboard in Resources */,
 				38DD82F21C78E053001C1104 /* tessdata in Resources */,
 				38DD82C91C781FE0001C1104 /* Assets.xcassets in Resources */,
-				38DD82C41C781FE0001C1104 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DD82FF1C790294001C1104 /* myTableViewController.swift in Sources */,
-				38DD83001C790294001C1104 /* myTableViewCell.swift in Sources */,
-				38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */,
-				38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */,
-				38DD82FE1C790294001C1104 /* totalUpViewController.swift in Sources */,
+				38B78E2C1C79077800DAB0C2 /* ViewController.swift in Sources */,
+				38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
+				38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */,
+				38B78E2B1C79077800DAB0C2 /* totalUpViewController.swift in Sources */,
+				38B78E2A1C79077800DAB0C2 /* myTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,12 +334,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		38DD82C21C781FE0001C1104 /* Main.storyboard */ = {
+		38B78E201C79077800DAB0C2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				38DD82C31C781FE0001C1104 /* Base */,
+				38B78E211C79077800DAB0C2 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */ = {
