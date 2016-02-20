@@ -68,7 +68,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func readText(image:UIImage){
         let tesseract = G8Tesseract()
-        tesseract.language = "eng+fra"
+        tesseract.language = "eng"
         tesseract.engineMode = .TesseractCubeCombined
         tesseract.pageSegmentationMode = .Auto
         tesseract.maximumRecognitionTime = 60.0
@@ -109,7 +109,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let splitStr = str.characters.split{$0 == "."}.map(String.init)
                 if (splitStr.count == 2){
                     if (splitStr[1].characters.count == 2){
-                        prices.append(str)
+                        if (!prices.contains(str)) {
+                            prices.append(str)
+                        }
                     }
                 }
             }
