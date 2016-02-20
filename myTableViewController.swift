@@ -14,13 +14,18 @@ class myTableViewController: UITableViewController {
     
     
     var prices: [String] = []
+    var pricesToRemove: [String] = []
     var totalPrice: Double = 0.0
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print(totalPrice)
+        for rem in pricesToRemove {
+            prices = prices.filter{$0 != rem}
+        }
         if (segue.identifier=="itemToPayment"){
             if let totalUpViewController = segue.destinationViewController as? totalUpViewController {
                 totalUpViewController.total=totalPrice
+                totalUpViewController.prices=prices
             }
             
         }
@@ -97,6 +102,7 @@ class myTableViewController: UITableViewController {
         let stringPrice=String(cell.characters.dropFirst())
         let cellPrice=Double(stringPrice)
         totalPrice+=cellPrice!
+        pricesToRemove.append(cell)
         print(cell)
     }
     
@@ -104,6 +110,7 @@ class myTableViewController: UITableViewController {
         let cell=prices[indexPath.row]
         let stringPrice=String(cell.characters.dropFirst())
         let cellPrice=Double(stringPrice)
+        pricesToRemove = pricesToRemove.filter{$0 != cell}
         totalPrice-=cellPrice!
     }
     

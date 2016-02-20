@@ -11,6 +11,7 @@ import UIKit
 class totalUpViewController: UIViewController {
     
     var total: Double = 0.0
+    var prices:[String] = []
 
     @IBOutlet weak var totalLabel: UILabel!
     
