@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var prices: [String] = []
+    
     @IBOutlet weak var currentImage: UIImageView!
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
@@ -35,8 +37,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
-            var prices = [String]()
-            prices = readText(scaleImage(newImage, maxDimension: 640))
+            readText(scaleImage(newImage, maxDimension: 640))
         } else {
             print("Error")
             return
@@ -60,7 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         })
     }
     
-    func readText(image:UIImage) -> [String]{
+    func readText(image:UIImage){
         let tesseract = G8Tesseract()
         tesseract.language = "eng"
         tesseract.engineMode = .TesseractCubeCombined
@@ -68,7 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         tesseract.maximumRecognitionTime = 60.0
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
-        return cleanString(tesseract.recognizedText)
+        cleanString(tesseract.recognizedText)
     }
     
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
@@ -94,7 +95,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return scaledImage
     }
     
-    func cleanString(mess: String)-> [String] {
+    func cleanString(mess: String){
         var prices = [String]()
         let cleanerMess = mess.stringByReplacingOccurrencesOfString("\n", withString: " ")
         let arr = cleanerMess.characters.split{$0 == " "}.map(String.init)
@@ -110,7 +111,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             }
         }
-        return prices
     }
     
     override func viewDidLoad() {
@@ -126,6 +126,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier=="showPrices"){
+            if let myTableViewController = segue.destinationViewController as? myTableViewController {
+                myTableViewController.prices=prices
+            }
+        }
     }
 }
 

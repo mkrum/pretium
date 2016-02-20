@@ -19,6 +19,10 @@
 		38DD82F21C78E053001C1104 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82F11C78E053001C1104 /* tessdata */; };
 		38DD82F41C78E06C001C1104 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82F31C78E06C001C1104 /* CoreImage.framework */; };
 		38DD82F61C78E0C8001C1104 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */; };
+		38DD82FE1C790294001C1104 /* totalUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82FA1C790294001C1104 /* totalUpViewController.swift */; };
+		38DD82FF1C790294001C1104 /* myTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82FB1C790294001C1104 /* myTableViewController.swift */; };
+		38DD83001C790294001C1104 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82FC1C790294001C1104 /* myTableViewCell.swift */; };
+		38DD83011C790294001C1104 /* pretiumTestSave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82FD1C790294001C1104 /* pretiumTestSave.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		38DD82F31C78E06C001C1104 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		38DD82F51C78E0C8001C1104 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		38DD82F71C78E177001C1104 /* pretium-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pretium-Bridging-Header.h"; sourceTree = "<group>"; };
+		38DD82FA1C790294001C1104 /* totalUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = totalUpViewController.swift; path = ../../../../Downloads/totalUpViewController.swift; sourceTree = "<group>"; };
+		38DD82FB1C790294001C1104 /* myTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewController.swift; path = ../../../../Downloads/myTableViewController.swift; sourceTree = "<group>"; };
+		38DD82FC1C790294001C1104 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = ../../../../Downloads/myTableViewCell.swift; sourceTree = "<group>"; };
+		38DD82FD1C790294001C1104 /* pretiumTestSave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = pretiumTestSave.storyboard; path = ../../../../Downloads/pretiumTestSave.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,10 @@
 				38DD82F11C78E053001C1104 /* tessdata */,
 				38DD82BE1C781FE0001C1104 /* AppDelegate.swift */,
 				38DD82C01C781FE0001C1104 /* ViewController.swift */,
+				38DD82FA1C790294001C1104 /* totalUpViewController.swift */,
+				38DD82FB1C790294001C1104 /* myTableViewController.swift */,
+				38DD82FC1C790294001C1104 /* myTableViewCell.swift */,
+				38DD82FD1C790294001C1104 /* pretiumTestSave.storyboard */,
 				38DD82C21C781FE0001C1104 /* Main.storyboard */,
 				38DD82C81C781FE0001C1104 /* Assets.xcassets */,
 				38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */,
@@ -252,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DD83011C790294001C1104 /* pretiumTestSave.storyboard in Resources */,
 				38DD82CC1C781FE0001C1104 /* LaunchScreen.storyboard in Resources */,
 				38DD82F21C78E053001C1104 /* tessdata in Resources */,
 				38DD82C91C781FE0001C1104 /* Assets.xcassets in Resources */,
@@ -280,8 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DD82FF1C790294001C1104 /* myTableViewController.swift in Sources */,
+				38DD83001C790294001C1104 /* myTableViewCell.swift in Sources */,
 				38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */,
 				38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */,
+				38DD82FE1C790294001C1104 /* totalUpViewController.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
