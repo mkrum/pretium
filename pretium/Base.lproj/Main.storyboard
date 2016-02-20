@@ -25,7 +25,7 @@
                     </view>
                     <connections>
                         <outlet property="currentImage" destination="xce-fi-KFd" id="Bf4-VI-sEI"/>
-                        <segue destination="uOz-fx-M1c" kind="show" identifier="showPrices" id="chX-E4-gg7"/>
+                        <segue destination="xPM-pA-3eu" kind="presentation" identifier="showPrices" id="Bds-Hi-Bdl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZh-y4-taZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-157" y="677"/>
+            <point key="canvasLocation" x="-285" y="817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A27-is-3TE">
@@ -130,7 +130,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80c-vu-xpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="-491"/>
+            <point key="canvasLocation" x="447" y="77"/>
         </scene>
         <!--Items-->
         <scene sceneID="1KH-CR-k9Y">
@@ -145,7 +145,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="USV-3u-zn4" id="fEa-yI-0Ds" userLabel="myCellLabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-ej-IvE" userLabel="Cell Label">
@@ -260,7 +260,4 @@
             <point key="canvasLocation" x="2412" y="57"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Gzd-Gz-44a"/>
-    </inferredMetricsTieBreakers>
 </document>
