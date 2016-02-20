@@ -50,7 +50,9 @@
                                     <constraint firstAttribute="width" constant="100" id="6e3-j1-xtK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Y9J-bx-bqE"/>
                                 </connections>
@@ -94,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.55686274509803924" green="0.090196078431372548" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="441-vn-K7h" firstAttribute="leading" secondItem="tq5-Il-eFo" secondAttribute="leading" id="0s9-HD-STT"/>
                             <constraint firstItem="mw9-Hw-NcS" firstAttribute="leading" secondItem="441-vn-K7h" secondAttribute="leading" id="3Oj-Zg-hjN"/>
@@ -145,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="USV-3u-zn4" id="fEa-yI-0Ds" userLabel="myCellLabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-ej-IvE" userLabel="Cell Label">
