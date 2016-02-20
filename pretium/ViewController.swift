@@ -22,7 +22,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 imagePicker.cameraCaptureMode = .Photo
                 imagePicker.delegate = self
                 presentViewController(imagePicker, animated: true, completion: {})
-                self.view.addSubview(UIActivityIndicatorView())
             } else {
                 print("Cannot access rear camera")
             }
@@ -36,7 +35,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
+            let actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
+            actInd.center = self.view.center
+            actInd.hidesWhenStopped = true
+            actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            view.addSubview(actInd)
+            actInd.startAnimating()
             readText(scaleImage(newImage, maxDimension: 640))
+            actInd.stopAnimating()
         } else {
             print("Error")
             return
