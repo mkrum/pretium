@@ -12,7 +12,14 @@ class totalUpViewController: UIViewController {
     
     var total: Double = 0.0
     var prices:[String] = []
+    
 
+
+    @IBAction func paymentButton(sender: AnyObject) {
+        print(textInput.text!)
+    }
+    
+    @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var totalLabel: UILabel!
     
     override func viewDidLoad(){
@@ -23,5 +30,19 @@ class totalUpViewController: UIViewController {
     }
     
 
+   /*
+    prepare for segue function
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier==""){
+            if let totalUpViewController = segue.destinationViewController as? totalUpViewController {
+                totalUpViewController.total=totalPrice
+                totalUpViewController.prices=prices
+            }
+            
+        }
+        
+    }
+    */
+    
 }
 
