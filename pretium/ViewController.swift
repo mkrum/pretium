@@ -65,6 +65,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         })
     }
     
+    func cleanString(mess: String)-> [String] {
+        var prices = [String]()
+        let cleanerMess = mess.stringByReplacingOccurrencesOfString("\n", withString: " ")
+        let arr = cleanerMess.characters.split{$0 == " "}.map(String.init)
+        for i in 0 ... arr.count{
+            if arr[i].rangeOfString(".") != nil{
+                let valCheck = arr[i].characters.split{$0 == "."}.map(String.init)
+                if valCheck[1].characters.count < 2{
+                    prices.append(arr[i])
+                }
+            }
+        }
+        return prices
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
