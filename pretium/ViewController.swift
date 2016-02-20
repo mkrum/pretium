@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 imagePicker.allowsEditing = false
                 imagePicker.sourceType = .Camera
                 imagePicker.cameraCaptureMode = .Photo
+                imagePicker.delegate = self
                 presentViewController(imagePicker, animated: true, completion: {})
             } else {
                 print("Cannot access rear camera")
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("Got an image")
         if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
+            let selectorToCall = Selector("image:didFinishSavingWithError:contextInfo:")
             UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
         }
         imagePicker.dismissViewControllerAnimated(true, completion: {
@@ -49,8 +50,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        takePicture()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        takePicture()
     }
     
     override func didReceiveMemoryWarning() {
