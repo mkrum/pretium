@@ -8,18 +8,54 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var currentImage: UIImageView!
+    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
+    
+    func takePicture(){
+        if(UIImagePickerController.isSourceTypeAvailable(.Camera)){
+            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil{
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .Camera
+                imagePicker.cameraCaptureMode = .Photo
+                presentViewController(imagePicker, animated: true, completion: {})
+            } else {
+                print("Cannot access rear camera")
+            }
+        } else {
+            print("Camera is inaccessible")
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print("Got an image")
+        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
+            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
+            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
+        }
+        imagePicker.dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user saves an image
+        })
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        print("User canceled image")
+        dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user selects cancel
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        takePicture()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

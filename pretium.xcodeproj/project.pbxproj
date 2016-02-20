@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37F2D33A1C7824620000F725 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2D3391C7824620000F725 /* CameraViewController.swift */; };
 		38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82BE1C781FE0001C1104 /* AppDelegate.swift */; };
 		38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD82C01C781FE0001C1104 /* ViewController.swift */; };
 		38DD82C41C781FE0001C1104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DD82C21C781FE0001C1104 /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37F2D3391C7824620000F725 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		38DD82BB1C781FE0001C1104 /* pretium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pretium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD82BE1C781FE0001C1104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38DD82C01C781FE0001C1104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			children = (
 				38DD82BE1C781FE0001C1104 /* AppDelegate.swift */,
 				38DD82C01C781FE0001C1104 /* ViewController.swift */,
-				37F2D3391C7824620000F725 /* CameraViewController.swift */,
 				38DD82C21C781FE0001C1104 /* Main.storyboard */,
 				38DD82C81C781FE0001C1104 /* Assets.xcassets */,
 				38DD82CA1C781FE0001C1104 /* LaunchScreen.storyboard */,
@@ -199,7 +196,7 @@
 				TargetAttributes = {
 					38DD82BA1C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 8P4FQ3Z5MY;
+						DevelopmentTeam = 2Q9637WMHC;
 					};
 					38DD82D11C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -266,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DD82C11C781FE0001C1104 /* ViewController.swift in Sources */,
-				37F2D33A1C7824620000F725 /* CameraViewController.swift in Sources */,
 				38DD82BF1C781FE0001C1104 /* AppDelegate.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
 			);
@@ -410,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkrum.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -421,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkrum.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
