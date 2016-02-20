@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var prices: [String] = []
+    var prices = [String]()
     var didTakePicture: Bool = false
     
     @IBOutlet weak var currentImage: UIImageView!
@@ -43,11 +43,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("Error")
             return
         }
-        
         dismissViewControllerAnimated(true, completion: {
             self.performSegueWithIdentifier("showPrices", sender: nil)
         })
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepare for segue")
+        if (segue.identifier=="showPrices"){
+            if let myTableViewController = segue.destinationViewController as? myTableViewController {
+                myTableViewController.prices=prices
+            }
+        }
+    }
+
     
     func getDocumentsDirectory() -> NSString {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -94,7 +104,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func cleanString(mess: String){
-        var prices = [String]()
         let cleanerMess = mess.stringByReplacingOccurrencesOfString("\n", withString: " ")
         let arr = cleanerMess.characters.split{$0 == " "}.map(String.init)
         for str in arr{
@@ -128,13 +137,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier=="showPrices"){
-            if let myTableViewController = segue.destinationViewController as? myTableViewController {
-                myTableViewController.prices=prices
-            }
-        }
     }
 }
 
