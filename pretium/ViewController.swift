@@ -74,7 +74,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         tesseract.maximumRecognitionTime = 60.0
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
-        print(tesseract.recognizedText)
+        print(cleanString(tesseract.recognizedText))
     }
     
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
@@ -106,10 +106,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let arr = cleanerMess.characters.split{$0 == " "}.map(String.init)
         for str in arr{
             if str.rangeOfString(".") != nil{
-                let valCheck = str.characters.split{$0 == "."}.map(String.init)
-                if valCheck[1].characters.count != 2{
+               
                     prices.append(str)
-                }
+
             }
         }
         return prices
