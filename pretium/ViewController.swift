@@ -72,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         for i in 0 ... arr.count{
             if arr[i].rangeOfString(".") != nil{
                 let valCheck = arr[i].characters.split{$0 == "."}.map(String.init)
-                if valCheck[1].characters.count < 2{
+                if valCheck[1].characters.count != 2{
                     prices.append(arr[i])
                 }
             }
