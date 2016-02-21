@@ -38,15 +38,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
-            let progressHUD = ProgressHUD(text: "Analyzing Photo")
-            dismissViewControllerAnimated(true, completion: nil)
-            self.view.addSubview(progressHUD)
-            readText(scaleImage(newImage, maxDimension: 640))
         } else {
             print("Error")
             return
         }
         dismissViewControllerAnimated(true, completion: {
+            let progressHUD = ProgressHUD(text: "Analyzing Photo")
+            self.view.addSubview(progressHUD)
+            self.readText(self.scaleImage(newImage, maxDimension: 640))
             self.performSegueWithIdentifier("showPrices", sender: nil)
         })
     }
