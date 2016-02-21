@@ -18,15 +18,18 @@ class startViewController: UIViewController {
     @IBOutlet weak var cashImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+/*
+        //sweet animation Krumdick wouldn't let me include
         var imageArray = [UIImage]()
         for var x=1; x<=2; x++ {
-            let img = UIImage(named: "cash\(x).png")
+            let img = UIImage(named: "money\(x).png")
             imageArray.append(img!)
         }
         cashImage2.animationImages=imageArray
-        cashImage2.animationDuration=0.8
+        cashImage2.animationDuration=2.0
         cashImage2.animationRepeatCount=0
         cashImage2.startAnimating()
     }
-    
+*/
+    }
 }

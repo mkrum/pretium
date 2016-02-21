@@ -43,5 +43,11 @@ class decisionController: UIViewController {
         }
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor=UIColor(red: 142.0/255, green: 23.0/255, blue: 37.0/255, alpha: 1.0)
+
+    }
 
 }
