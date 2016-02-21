@@ -11,12 +11,20 @@ import UIKit
 
 class decisionController: UIViewController {
     
-    var prices:[String] = []
+    var prices:[String]=[]
     
+    @IBAction func chargeAgain(sender: AnyObject) {
+        if let navigationController = navigationController{
+            navigationController.popToViewController(navigationController.viewControllers[0], animated: true)
+        }
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier=="backToNavigation"){
             let navigationController=segue.destinationViewController as! UINavigationController
             if let myTableViewController = navigationController.viewControllers[0] as? myTableViewController {
+                print("in decision controller")
+                print(prices)
                 myTableViewController.prices=prices
             }
         }

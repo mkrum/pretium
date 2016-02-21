@@ -256,12 +256,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJ1-JC-7HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="57"/>
+            <point key="canvasLocation" x="1850" y="-8"/>
         </scene>
-        <!--View Controller-->
+        <!--decisionController-->
         <scene sceneID="vgu-vV-0at">
             <objects>
-                <viewController id="3UQ-42-OBM" sceneMemberID="viewController">
+                <viewController title="decisionController" id="3UQ-42-OBM" customClass="decisionController" customModule="pretium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ogL-wf-VJQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ucc-9Z-0T6"/>
@@ -284,7 +284,7 @@
                                         <rect key="frame" x="0.0" y="36" width="177" height="30"/>
                                         <state key="normal" title="Click here to charge more"/>
                                         <connections>
-                                            <segue destination="xPM-pA-3eu" kind="show" id="Wxu-zV-fZW"/>
+                                            <action selector="chargeAgain:" destination="3UQ-42-OBM" eventType="touchUpInside" id="zYf-BA-OtX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -303,7 +303,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wxu-zV-fZW"/>
-        <segue reference="Y9J-bx-bqE"/>
+        <segue reference="YAz-J5-J8I"/>
     </inferredMetricsTieBreakers>
 </document>
