@@ -19,13 +19,11 @@ class myTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print(totalPrice)
-        for rem in pricesToRemove {
-            prices = prices.filter{$0 != rem}
-        }
         if (segue.identifier=="itemToPayment"){
             if let totalUpViewController = segue.destinationViewController as? totalUpViewController {
                 totalUpViewController.total=totalPrice
                 totalUpViewController.prices=prices
+                totalUpViewController.pricesToRemove=pricesToRemove
                 print("in table view")
                 print(prices)
             }
@@ -47,6 +45,7 @@ class myTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        totalPrice=0
     }
     
     func toggleEdit(button: UINavigationItem){
@@ -106,7 +105,14 @@ class myTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = prices[indexPath.row]
-        let stringPrice=String(cell.characters.dropFirst())
+        var stringPrice: String=""
+        if let c = cell.characters.first{
+            if(c=="$"){
+                stringPrice=String(cell.characters.dropFirst())
+            } else {
+                stringPrice=cell
+            }
+        }
         let cellPrice=Double(stringPrice)
         totalPrice+=cellPrice!
         pricesToRemove.append(cell)
