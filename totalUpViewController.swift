@@ -35,6 +35,16 @@ class totalUpViewController: UIViewController {
         totalLabel.text=(formatter.stringFromNumber(total))
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier=="backToNavigation"){
+            let navigationController=segue.destinationViewController as! UINavigationController
+            if let myTableViewController = navigationController.viewControllers[0] as? myTableViewController {
+                myTableViewController.prices=prices
+            }
+        }
+        
+    }
+
 
    /*
     prepare for segue function

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="77t-vG-VKs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="77t-vG-VKs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -147,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="USV-3u-zn4" id="fEa-yI-0Ds" userLabel="myCellLabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-ej-IvE" userLabel="Cell Label">
@@ -237,8 +237,8 @@
                                         <state key="normal" title="Click here to request payment"/>
                                         <connections>
                                             <action selector="paymentButton:" destination="KJp-zI-kpQ" eventType="touchUpInside" id="8aE-wL-rtG"/>
-                                            <segue destination="K7A-nT-PCT" kind="show" id="S7u-NV-DBK">
-                                                <nil key="action"/>
+                                            <segue destination="xPM-pA-3eu" kind="popoverPresentation" identifier="backToNavigation" popoverAnchorView="FuS-Rk-3Ag" id="vnV-pc-sU6">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
                                     </button>
@@ -260,26 +260,9 @@
             </objects>
             <point key="canvasLocation" x="1769" y="57"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="XaU-FV-3rQ">
-            <objects>
-                <viewController id="K7A-nT-PCT" customClass="ViewController" customModule="pretium" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sjC-lg-7Fk"/>
-                        <viewControllerLayoutGuide type="bottom" id="OXe-z3-Mdo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YBe-Hs-edI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jA7-ar-dce" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2445" y="57"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="vnV-pc-sU6"/>
         <segue reference="YAz-J5-J8I"/>
     </inferredMetricsTieBreakers>
 </document>
