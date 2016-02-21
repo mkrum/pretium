@@ -11,13 +11,13 @@ import UIKit
 class totalUpViewController: UIViewController {
     
     var total: Double = 0.0
-    var prices:[String] = []
+    var prices:[String]=[]
     
 
 
     @IBAction func paymentButton(sender: AnyObject?) {
         print("payment")
-        let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
+      /*  let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url!) {(data, response, error) in
             
@@ -52,8 +52,14 @@ class totalUpViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier=="toDecision"){
+            print("snake works")
             if let decisionController = segue.destinationViewController as? decisionController {
+                print("ran true")
+                print("in total up")
+                print(prices)
                 decisionController.prices=prices
+            } else {
+                print("not true")
             }
         }
         

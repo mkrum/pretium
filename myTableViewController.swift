@@ -13,7 +13,7 @@ class myTableViewController: UITableViewController {
     @IBOutlet var myTableView: UITableView!
     
     
-    var prices: [String] = []
+    var prices: [String]=[]
     var pricesToRemove: [String] = []
     var totalPrice: Double = 0.0
     
@@ -26,6 +26,8 @@ class myTableViewController: UITableViewController {
             if let totalUpViewController = segue.destinationViewController as? totalUpViewController {
                 totalUpViewController.total=totalPrice
                 totalUpViewController.prices=prices
+                print("in table view")
+                print(prices)
             }
             
         }
@@ -40,6 +42,11 @@ class myTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         tableView.allowsMultipleSelectionDuringEditing=true
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     func toggleEdit(button: UINavigationItem){
