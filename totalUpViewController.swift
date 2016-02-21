@@ -40,7 +40,23 @@ class totalUpViewController: UIViewController {
             //print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         }
         dataTask.resume()
-        print(textInput.text!)
+        let para:NSMutableDictionary = NSMutableDictionary()
+        para.setValue("balance", forKey: "medium")
+        para.setValue("56c66be6a73e492741507c70", forKey: "payee_id")
+        para.setValue(700, forKey: "amount")
+        para.setValue("2016-02-21", forKey: "transaction_date")
+        para.setValue("executed", forKey: "status")
+        para.setValue("Testing", forKey: "description")
+        let jsonData: NSData
+        do{
+            jsonData = try NSJSONSerialization.dataWithJSONObject(para, options: NSJSONWritingOptions())
+            let url2 = NSURL(string: "http://api.reimaginebanking.com/accounts/%2256c66be6a73e492741507c75%22/transfers?key=a542f50542abaf9fe3d1b119f1303007")
+            let newSes = NSURLSession.sharedSession()
+            let postTask = newSes.uploadTaskWithRequest(NSURLRequest(URL: url2!), fromData: jsonData)
+            postTask.resume()
+        } catch {
+            print("Yeah let me check for errors during a hackathon, oh wait")
+        }
     }
     
     @IBOutlet weak var textInput: UITextField!
