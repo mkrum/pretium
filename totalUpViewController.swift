@@ -9,6 +9,7 @@
 import UIKit
 
 class totalUpViewController: UIViewController {
+    let client = NSEClient.sharedInstance
     
     var total: Double = 0.0
     var prices:[String]=[]
@@ -18,29 +19,115 @@ class totalUpViewController: UIViewController {
 
     @IBAction func paymentButton(sender: AnyObject) {
         print("payment")
-        let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
+        let myAccountId = "56c66be6a73e492741507c7e"
+        let url = NSURL(string: "http://api.reimaginebanking.com/accounts?key=54c00b786b0e4a4da4a8a33bb7ad7570")
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url!) {(data, response, error) in
             
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                
-                if let nicknames = json["results"] as? [[String: AnyObject]] {
-                    for nickname in nicknames {
-                        if let name = nickname["nickname"] as? String {
-                            if name.rangeOfString(self.textInput.text!) != nil{
-                                print("Nickname: %@", name)
+            func testPostTransfer() {
+                TransferRequest(block: {(builder:TransferRequestBuilder) in
+                    builder.requestType = HTTPType.POST
+                    builder.amount = 10
+                    builder.transferMedium = TransactionMedium.BALANCE
+                    builder.description = "test"
+                    builder.accountId = myAccountId
+                    builder.payeeId = "56c94e807742719f0e4d5189"
+                    
+                })?.send(completion: {(result) in
+                    TransferRequest(block: {(builder:TransferRequestBuilder) in
+                        builder.requestType = HTTPType.GET
+                        builder.accountId = myAccountId
+                    })?.send(completion: {(result:TransferResult) in
+                        var transfers = result.getAllTransfers()
+                        print(result)
+                        
+                        if transfers!.count > 0 {
+                            let transferToGet = transfers![transfers!.count-1]
+                            var transferToDelete:Transfer? = nil;
+                            for transfer in transfers! {
+                                if transfer.status == "pending" {
+                                    transferToDelete = transfer
+                                    //                            self.testDeleteTransfer(transferToDelete)
+                                }
                             }
+                            
+                            //self.testGetOneTransfer(transferToGet)
+                            //self.testPutTransfer(transferToDelete)
+                            
                         }
-                    }
-                }
-            } catch {
-                print("error serializing JSON: \(error)")
+                    })
+                    
+                })
             }
+            
+//            do {
+//                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+//                
+//                if let nicknames = json["results"] as? [[String: AnyObject]] {
+//                    for nickname in nicknames {
+//                        if let name = nickname["nickname"] as? String {
+//                            if name.rangeOfString(self.textInput.text!) != nil{
+//                                if let id = nickname["customer_id"] as? String {
+//                                    if id != myAccountId{
+//                                        // POST TRANSFER
+//                                        TransferRequest(block: {(builder:TransferRequestBuilder) in
+//                                            builder.requestType = HTTPType.POST
+//                                            builder.amount = Int(self.total)
+//                                            builder.transferMedium = TransactionMedium.BALANCE
+//                                            builder.description = "test"
+//                                            builder.accountId = id
+//                                            builder.payeeId = myAccountId
+//                                            
+//                                        })?.send(completion: {(result) in
+//                                            TransferRequest(block: {(builder:TransferRequestBuilder) in
+//                                                builder.requestType = HTTPType.GET
+//                                                builder.accountId = id
+//                                            })?.send(completion: {(result:TransferResult) in
+//                                                var transfers = result.getAllTransfers()
+//                                                print(result)
+//                                                
+//                                                if transfers!.count > 0 {
+//                                                    let transferToGet = transfers![transfers!.count-1]
+//                                                    var transferToDelete:Transfer? = nil;
+//                                                    for transfer in transfers! {
+//                                                        if transfer.status == "pending" {
+//                                                            transferToDelete = transfer
+//                                                            //                            self.testDeleteTransfer(transferToDelete)
+//                                                        }
+//                                                    }
+//                                                    
+//                                                    self.testGetOneTransfer(transferToGet)
+//                                                    //self.testPutTransfer(transferToDelete)
+//                                                    
+//                                                }
+//                                            })
+//                                            
+//                                        })
+//                                        // POST TRANSFER
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            } catch {
+//                print("error serializing JSON: \(error)")
+//            }
             //print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         }
         dataTask.resume()
         print(textInput.text!)
+        
+    }
+    
+    func testGetOneTransfer(transfer:Transfer) {
+        TransferRequest(block: {(builder:TransferRequestBuilder) in
+            builder.requestType = HTTPType.GET
+            builder.transferId = transfer.transferId
+        })?.send(completion: {(result:TransferResult) in
+            let transferResult = result.getTransfer()
+            print(transferResult)
+        })
     }
     
     @IBOutlet weak var textInput: UITextField!

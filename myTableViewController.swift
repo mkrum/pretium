@@ -126,7 +126,4 @@ class myTableViewController: UITableViewController {
         pricesToRemove = pricesToRemove.filter{$0 != cell}
         totalPrice-=cellPrice!
     }
-    
-    
-    
 }

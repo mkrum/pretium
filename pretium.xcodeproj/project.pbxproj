@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3767D1291C79735D0093355E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D1191C79735D0093355E /* Account.swift */; };
+		3767D12A1C79735D0093355E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D11A1C79735D0093355E /* Address.swift */; };
+		3767D12E1C79735D0093355E /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D11E1C79735D0093355E /* Customer.swift */; };
+		3767D12F1C79735D0093355E /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D11F1C79735D0093355E /* Deposit.swift */; };
+		3767D1311C79735D0093355E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3767D1211C79735D0093355E /* Info.plist */; };
+		3767D1331C79735D0093355E /* NSEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D1241C79735D0093355E /* NSEClient.swift */; };
+		3767D1351C79735D0093355E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D1261C79735D0093355E /* Transaction.swift */; };
+		3767D1361C79735D0093355E /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D1271C79735D0093355E /* Transfer.swift */; };
 		37974BBF1C79092500A4A08B /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37974BBE1C79092500A4A08B /* startViewController.swift */; };
+		37C96A561C797C6600F05D0A /* EnterpriseRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C96A2F1C797C6600F05D0A /* EnterpriseRequests.swift */; };
 		38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */; };
 		38B78E281C79077800DAB0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B78E201C79077800DAB0C2 /* Main.storyboard */; };
 		38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E221C79077800DAB0C2 /* myTableViewCell.swift */; };
@@ -44,7 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3767D1191C79735D0093355E /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		3767D11A1C79735D0093355E /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		3767D11E1C79735D0093355E /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		3767D11F1C79735D0093355E /* Deposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
+		3767D1211C79735D0093355E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3767D1231C79735D0093355E /* Nessie-iOS-Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Nessie-iOS-Wrapper.h"; sourceTree = "<group>"; };
+		3767D1241C79735D0093355E /* NSEClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEClient.swift; sourceTree = "<group>"; };
+		3767D1261C79735D0093355E /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		3767D1271C79735D0093355E /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		37974BBE1C79092500A4A08B /* startViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
+		37C96A2F1C797C6600F05D0A /* EnterpriseRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterpriseRequests.swift; path = "../nessie-ios-sdk/Nessie-iOS-Wrapper/EnterpriseRequests.swift"; sourceTree = "<group>"; };
 		38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38B78E211C79077800DAB0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = pretium/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38B78E221C79077800DAB0C2 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = ../myTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +117,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3767D1181C79735D0093355E /* Nessie-iOS-Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				3767D1191C79735D0093355E /* Account.swift */,
+				3767D11A1C79735D0093355E /* Address.swift */,
+				3767D11E1C79735D0093355E /* Customer.swift */,
+				3767D11F1C79735D0093355E /* Deposit.swift */,
+				37C96A2F1C797C6600F05D0A /* EnterpriseRequests.swift */,
+				3767D1211C79735D0093355E /* Info.plist */,
+				3767D1231C79735D0093355E /* Nessie-iOS-Wrapper.h */,
+				3767D1241C79735D0093355E /* NSEClient.swift */,
+				3767D1261C79735D0093355E /* Transaction.swift */,
+				3767D1271C79735D0093355E /* Transfer.swift */,
+			);
+			path = "Nessie-iOS-Wrapper";
+			sourceTree = "<group>";
+		};
 		38DD82B21C781FE0001C1104 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +161,7 @@
 		38DD82BD1C781FE0001C1104 /* pretium */ = {
 			isa = PBXGroup;
 			children = (
+				3767D1181C79735D0093355E /* Nessie-iOS-Wrapper */,
 				38DD82F11C78E053001C1104 /* tessdata */,
 				38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */,
 				38B78E201C79077800DAB0C2 /* Main.storyboard */,
@@ -270,6 +307,7 @@
 				38DD82CC1C781FE0001C1104 /* LaunchScreen.storyboard in Resources */,
 				38B78E281C79077800DAB0C2 /* Main.storyboard in Resources */,
 				38DD82F21C78E053001C1104 /* tessdata in Resources */,
+				3767D1311C79735D0093355E /* Info.plist in Resources */,
 				38DD82C91C781FE0001C1104 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,13 +333,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3767D1361C79735D0093355E /* Transfer.swift in Sources */,
 				38B78E2C1C79077800DAB0C2 /* ViewController.swift in Sources */,
+				3767D12E1C79735D0093355E /* Customer.swift in Sources */,
 				37974BBF1C79092500A4A08B /* startViewController.swift in Sources */,
 				38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
+				3767D1331C79735D0093355E /* NSEClient.swift in Sources */,
+				3767D12A1C79735D0093355E /* Address.swift in Sources */,
 				38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */,
+				3767D1291C79735D0093355E /* Account.swift in Sources */,
 				D7C6A8721C7939ED00519C2E /* decisionController.swift in Sources */,
+				37C96A561C797C6600F05D0A /* EnterpriseRequests.swift in Sources */,
 				38B78E2B1C79077800DAB0C2 /* totalUpViewController.swift in Sources */,
+				3767D1351C79735D0093355E /* Transaction.swift in Sources */,
+				3767D12F1C79735D0093355E /* Deposit.swift in Sources */,
 				38B78E2A1C79077800DAB0C2 /* myTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
