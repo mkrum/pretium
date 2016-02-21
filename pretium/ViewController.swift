@@ -38,6 +38,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
+            let progressHUD = ProgressHUD(text: "Analyzing Photo")
+            self.view.addSubview(progressHUD)
             readText(scaleImage(newImage, maxDimension: 640))
         } else {
             print("Error")
