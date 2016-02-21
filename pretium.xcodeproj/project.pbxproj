@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37974BBF1C79092500A4A08B /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37974BBE1C79092500A4A08B /* startViewController.swift */; };
+		38272C7C1C7989D00075B07D /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38272C7B1C7989D00075B07D /* ProgressHUD.swift */; };
 		38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */; };
 		38B78E281C79077800DAB0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B78E201C79077800DAB0C2 /* Main.storyboard */; };
 		38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E221C79077800DAB0C2 /* myTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		37974BBE1C79092500A4A08B /* startViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
+		38272C7B1C7989D00075B07D /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38B78E211C79077800DAB0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = pretium/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38B78E221C79077800DAB0C2 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = ../myTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				38B78E221C79077800DAB0C2 /* myTableViewCell.swift */,
 				38B78E231C79077800DAB0C2 /* myTableViewController.swift */,
 				38B78E241C79077800DAB0C2 /* totalUpViewController.swift */,
+				38272C7B1C7989D00075B07D /* ProgressHUD.swift */,
 				D7C6A8711C7939ED00519C2E /* decisionController.swift */,
 				38B78E251C79077800DAB0C2 /* ViewController.swift */,
 				37974BBE1C79092500A4A08B /* startViewController.swift */,
@@ -297,6 +300,7 @@
 			files = (
 				38B78E2C1C79077800DAB0C2 /* ViewController.swift in Sources */,
 				37974BBF1C79092500A4A08B /* startViewController.swift in Sources */,
+				38272C7C1C7989D00075B07D /* ProgressHUD.swift in Sources */,
 				38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
 				38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */,
