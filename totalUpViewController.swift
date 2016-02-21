@@ -12,6 +12,7 @@ class totalUpViewController: UIViewController {
     
     var total: Double = 0.0
     var prices:[String]=[]
+    var pricesToRemove: [String] = []
     
 
 
@@ -53,15 +54,13 @@ class totalUpViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        for rem in pricesToRemove {
+            prices = prices.filter{$0 != rem}
+        }
         if (segue.identifier=="toDecision"){
-            print("snake works")
             if let decisionController = segue.destinationViewController as? decisionController {
-                print("ran true")
-                print("in total up")
                 print(prices)
                 decisionController.prices=prices
-            } else {
-                print("not true")
             }
         }
         
