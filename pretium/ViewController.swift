@@ -42,12 +42,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("Error")
             return
         }
-        dismissViewControllerAnimated(true, completion: {
-            let progressHUD = ProgressHUD(text: "Analyzing Photo")
-            self.view.addSubview(progressHUD)
-            self.readText(self.scaleImage(newImage, maxDimension: 640))
-            self.performSegueWithIdentifier("showPrices", sender: nil)
-        })
+        dismissViewControllerAnimated(true, completion: {})
+        let progressHUD = ProgressHUD(text: "Analyzing Photo")
+        view.addSubview(progressHUD)
+        readText(scaleImage(newImage, maxDimension: 640))
+        self.performSegueWithIdentifier("showPrices", sender: nil)
     }
     
     
