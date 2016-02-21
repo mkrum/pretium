@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="77t-vG-VKs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="77t-vG-VKs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -147,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="USV-3u-zn4" id="fEa-yI-0Ds" userLabel="myCellLabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-ej-IvE" userLabel="Cell Label">
@@ -237,9 +237,7 @@
                                         <state key="normal" title="Click here to request payment"/>
                                         <connections>
                                             <action selector="paymentButton:" destination="KJp-zI-kpQ" eventType="touchUpInside" id="8aE-wL-rtG"/>
-                                            <segue destination="xPM-pA-3eu" kind="popoverPresentation" identifier="backToNavigation" popoverAnchorView="FuS-Rk-3Ag" id="vnV-pc-sU6">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <segue destination="3UQ-42-OBM" kind="show" identifier="toDecision" id="lOO-MB-zDz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -260,9 +258,52 @@
             </objects>
             <point key="canvasLocation" x="1769" y="57"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vgu-vV-0at">
+            <objects>
+                <viewController id="3UQ-42-OBM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ogL-wf-VJQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ucc-9Z-0T6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jy6-tA-PhR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-8Y-Mih">
+                                <rect key="frame" x="282" y="241" width="177" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jou-6z-8by">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="30"/>
+                                        <state key="normal" title="Click here if you are done"/>
+                                        <connections>
+                                            <segue destination="77t-vG-VKs" kind="presentation" identifier="backToStart" id="31m-Bh-q0w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q5-JF-knR">
+                                        <rect key="frame" x="0.0" y="36" width="177" height="30"/>
+                                        <state key="normal" title="Click here to charge more"/>
+                                        <connections>
+                                            <segue destination="xPM-pA-3eu" kind="show" id="Wxu-zV-fZW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pce-8Y-Mih" firstAttribute="centerX" secondItem="jy6-tA-PhR" secondAttribute="centerX" id="bg5-fD-6Wj"/>
+                            <constraint firstItem="Pce-8Y-Mih" firstAttribute="centerY" secondItem="jy6-tA-PhR" secondAttribute="centerY" id="g37-nY-R5l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yR-FU-cly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2533" y="57"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vnV-pc-sU6"/>
-        <segue reference="YAz-J5-J8I"/>
+        <segue reference="Wxu-zV-fZW"/>
+        <segue reference="Y9J-bx-bqE"/>
     </inferredMetricsTieBreakers>
 </document>

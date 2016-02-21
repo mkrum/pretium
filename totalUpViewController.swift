@@ -22,7 +22,7 @@ class totalUpViewController: UIViewController {
         let dataTask = session.dataTaskWithURL(url!) {(data, response, error) in
             print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         }
-        dataTask.resume()
+        task.resume()*/
         print(textInput.text!)
     }
     
@@ -37,10 +37,9 @@ class totalUpViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier=="backToNavigation"){
-            let navigationController=segue.destinationViewController as! UINavigationController
-            if let myTableViewController = navigationController.viewControllers[0] as? myTableViewController {
-                myTableViewController.prices=prices
+        if (segue.identifier=="toDecision"){
+            if let decisionController = segue.destinationViewController as? decisionController {
+                decisionController.prices=prices
             }
         }
         
