@@ -13,6 +13,7 @@ class totalUpViewController: UIViewController {
     var total: Double = 0.0
     var prices:[String]=[]
     var pricesToRemove: [String] = []
+    
 
 
     @IBAction func paymentButton(sender: AnyObject) {
@@ -69,10 +70,9 @@ class totalUpViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("below are the prices to remove")
-        print(pricesToRemove)
-        print("below are the prices")
-        print(prices)
+        for rem in pricesToRemove {
+            prices = prices.filter{$0 != rem}
+        }
         if (segue.identifier=="toDecision"){
             if let decisionController = segue.destinationViewController as? decisionController {
                 print(prices)

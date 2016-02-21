@@ -1,6 +1,6 @@
 //
 //  myTableViewController.swift
-//  pretium
+//  tableViewTest
 //
 //  Created by Luke Duane on 2/20/16.
 //  Copyright © 2016 Luke Duane. All rights reserved.
@@ -19,14 +19,13 @@ class myTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print(totalPrice)
-        for rem in pricesToRemove {
-            prices = prices.filter{$0 != rem}
-        }
         if (segue.identifier=="itemToPayment"){
             if let totalUpViewController = segue.destinationViewController as? totalUpViewController {
                 totalUpViewController.total=totalPrice
                 totalUpViewController.prices=prices
                 totalUpViewController.pricesToRemove=pricesToRemove
+                print("in table view")
+                print(prices)
             }
             
         }
@@ -45,17 +44,8 @@ class myTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        totalPrice=0
-        print(prices)
-        for rem in pricesToRemove {
-            print(rem)
-            print("in for loop")
-            if(!prices.contains(rem)){
-                prices.append(rem)
-            }
-        }
-        print(prices)
         tableView.reloadData()
+        totalPrice=0
     }
     
     func toggleEdit(button: UINavigationItem){
