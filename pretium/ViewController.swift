@@ -42,11 +42,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("Error")
             return
         }
-        dismissViewControllerAnimated(true, completion: {})
-        let progressHUD = ProgressHUD(text: "Analyzing Photo")
-        view.addSubview(progressHUD)
         readText(scaleImage(newImage, maxDimension: 640))
-        self.performSegueWithIdentifier("showPrices", sender: nil)
+        dismissViewControllerAnimated(true, completion: {
+                self.performSegueWithIdentifier("showPrices", sender: nil)
+        })
+
+        
+    
     }
     
     
@@ -73,6 +75,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func readText(image:UIImage){
+        let progressHUD = ProgressHUD(text: "Analyzing Photo")
+        view.addSubview(progressHUD)
         let tesseract = G8Tesseract()
         tesseract.language = "eng"
         tesseract.engineMode = .TesseractCubeCombined
