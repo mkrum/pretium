@@ -228,7 +228,7 @@
 				TargetAttributes = {
 					38DD82BA1C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 2Q9637WMHC;
+						DevelopmentTeam = 7YA2TTA92F;
 					};
 					38DD82D11C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -457,7 +457,7 @@
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = me.dkerriga.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LukeDuane.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
@@ -481,7 +481,7 @@
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = me.dkerriga.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LukeDuane.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
