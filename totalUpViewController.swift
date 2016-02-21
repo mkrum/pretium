@@ -27,7 +27,9 @@ class totalUpViewController: UIViewController {
                 if let nicknames = json["results"] as? [[String: AnyObject]] {
                     for nickname in nicknames {
                         if let name = nickname["nickname"] as? String {
-                            print("Nickname: %@", name)
+                            if name.rangeOfString(self.textInput.text!) != nil{
+                                print("Nickname: %@", name)
+                            }
                         }
                     }
                 }
