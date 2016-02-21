@@ -17,6 +17,7 @@
 		3767D1361C79735D0093355E /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767D1271C79735D0093355E /* Transfer.swift */; };
 		37974BBF1C79092500A4A08B /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37974BBE1C79092500A4A08B /* startViewController.swift */; };
 		37C96A561C797C6600F05D0A /* EnterpriseRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C96A2F1C797C6600F05D0A /* EnterpriseRequests.swift */; };
+		38272C7C1C7989D00075B07D /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38272C7B1C7989D00075B07D /* ProgressHUD.swift */; };
 		38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */; };
 		38B78E281C79077800DAB0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B78E201C79077800DAB0C2 /* Main.storyboard */; };
 		38B78E291C79077800DAB0C2 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B78E221C79077800DAB0C2 /* myTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		3767D1271C79735D0093355E /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		37974BBE1C79092500A4A08B /* startViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
 		37C96A2F1C797C6600F05D0A /* EnterpriseRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterpriseRequests.swift; path = "../nessie-ios-sdk/Nessie-iOS-Wrapper/EnterpriseRequests.swift"; sourceTree = "<group>"; };
+		38272C7B1C7989D00075B07D /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		38B78E1F1C79077800DAB0C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38B78E211C79077800DAB0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = pretium/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38B78E221C79077800DAB0C2 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = ../myTableViewCell.swift; sourceTree = "<group>"; };
@@ -266,7 +268,7 @@
 				TargetAttributes = {
 					38DD82BA1C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 7YA2TTA92F;
+						DevelopmentTeam = 2Q9637WMHC;
 					};
 					38DD82D11C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -505,7 +507,7 @@
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = com.LukeDuane.pretium;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dkerriga.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
@@ -529,7 +531,7 @@
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = com.LukeDuane.pretium;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dkerriga.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
