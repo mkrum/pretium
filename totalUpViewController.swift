@@ -15,9 +15,9 @@ class totalUpViewController: UIViewController {
     
 
 
-    @IBAction func paymentButton(sender: AnyObject?) {
+    @IBAction func paymentButton(sender: AnyObject) {
         print("payment")
-      /*  let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
+        let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url!) {(data, response, error) in
             
