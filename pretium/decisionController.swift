@@ -15,6 +15,12 @@ class decisionController: UIViewController {
     
     @IBAction func chargeAgain(sender: AnyObject) {
         if let navigationController = navigationController{
+            if let myTableViewController = navigationController.viewControllers[0] as? myTableViewController {
+                print("in decision controller")
+                print(prices)
+                myTableViewController.prices=prices
+                myTableViewController.pricesToRemove.removeAll()
+            }
             navigationController.popToViewController(navigationController.viewControllers[0], animated: true)
         }
     }
@@ -26,6 +32,7 @@ class decisionController: UIViewController {
                 print("in decision controller")
                 print(prices)
                 myTableViewController.prices=prices
+                myTableViewController.pricesToRemove.removeAll()
             }
         }
         if (segue.identifier=="backToStart"){
