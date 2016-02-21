@@ -2,7 +2,7 @@
 //  totalUpViewController.swift
 //  pretium
 //
-//  Created by Luke Duane on 2/20/16.
+//  Created by Luke "Thunderous Menace" Duane on 2/20/16.
 //  Copyright © 2016 ndSophware. All rights reserved.
 //
 
