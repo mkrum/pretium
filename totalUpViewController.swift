@@ -18,12 +18,28 @@ class totalUpViewController: UIViewController {
 
     @IBAction func paymentButton(sender: AnyObject) {
         print("payment")
-      /*  let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
+        let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url!) {(data, response, error) in
-            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+            
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                
+                if let nicknames = json["results"] as? [[String: AnyObject]] {
+                    for nickname in nicknames {
+                        if let name = nickname["nickname"] as? String {
+                            if name.rangeOfString(self.textInput.text!) != nil{
+                                print("Nickname: %@", name)
+                            }
+                        }
+                    }
+                }
+            } catch {
+                print("error serializing JSON: \(error)")
+            }
+            //print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         }
-        dataTask.resume() */
+        dataTask.resume()
         print(textInput.text!)
     }
     
@@ -49,9 +65,5 @@ class totalUpViewController: UIViewController {
         }
         
     }
-
-
-
-    
 }
 
