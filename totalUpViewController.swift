@@ -16,12 +16,12 @@ class totalUpViewController: UIViewController {
 
 
     @IBAction func paymentButton(sender: AnyObject) {
-        let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!){
-            (data, response, error) in
-            print(NSString(data: data!.nickname, encoding: NSUTF8StringEncoding))
-        }
-        task.resume()
+//        let url = NSURL(string: "http://api.reimaginebanking.com/enterprise/accounts?key=a542f50542abaf9fe3d1b119f1303007")
+//        let task = NSURLSession.sharedSession().dataTaskWithURL(url!){
+//            (data, response, error) in
+//            print(NSString(data: data!.nickname, encoding: NSUTF8StringEncoding))
+//        }
+//        task.resume()
         print(textInput.text!)
     }
     
@@ -35,6 +35,16 @@ class totalUpViewController: UIViewController {
         totalLabel.text=(formatter.stringFromNumber(total))
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier=="backToNavigation"){
+            let navigationController=segue.destinationViewController as! UINavigationController
+            if let myTableViewController = navigationController.viewControllers[0] as? myTableViewController {
+                myTableViewController.prices=prices
+            }
+        }
+        
+    }
+
 
    /*
     prepare for segue function
