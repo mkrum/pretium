@@ -11,6 +11,8 @@ import UIKit
 
 class startViewController: UIViewController {
     
+    var prices:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
