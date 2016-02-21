@@ -57,7 +57,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Y9J-bx-bqE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Take a picture of your receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw9-Hw-NcS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Step 1: Take a picture of your receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw9-Hw-NcS">
                                 <rect key="frame" x="124" y="145" width="353" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="353" id="hXo-A3-sEw"/>
@@ -86,33 +86,31 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to pretium!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-nf-wGL">
-                                <rect key="frame" x="137" y="55" width="293" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="Xwk-K9-Suq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="jPu-ex-mNn">
+                                <rect key="frame" x="136" y="20" width="291" height="144"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-da-VYc">
+                                <rect key="frame" x="187" y="423" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.55686274509803924" green="0.090196078431372548" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="441-vn-K7h" firstAttribute="leading" secondItem="tq5-Il-eFo" secondAttribute="leading" id="0s9-HD-STT"/>
                             <constraint firstItem="mw9-Hw-NcS" firstAttribute="leading" secondItem="441-vn-K7h" secondAttribute="leading" id="3Oj-Zg-hjN"/>
-                            <constraint firstItem="dtp-nf-wGL" firstAttribute="top" secondItem="zhk-EI-Z5t" secondAttribute="bottom" constant="35" id="5kg-tq-nvo"/>
                             <constraint firstItem="441-vn-K7h" firstAttribute="centerY" secondItem="ree-LY-PMr" secondAttribute="centerY" id="8U5-w2-eXL"/>
                             <constraint firstItem="TkA-KI-Ldd" firstAttribute="top" secondItem="ygh-lq-LbL" secondAttribute="bottom" constant="36" id="Lkj-k2-2hh"/>
                             <constraint firstItem="tq5-Il-eFo" firstAttribute="top" secondItem="441-vn-K7h" secondAttribute="bottom" constant="89" id="RQ7-bt-Mhu"/>
-                            <constraint firstItem="mw9-Hw-NcS" firstAttribute="top" secondItem="dtp-nf-wGL" secondAttribute="bottom" constant="38" id="RX9-L0-yt7"/>
+                            <constraint firstItem="jPu-ex-mNn" firstAttribute="centerX" secondItem="ree-LY-PMr" secondAttribute="centerX" id="bor-We-sJ7"/>
                             <constraint firstItem="ygh-lq-LbL" firstAttribute="centerX" secondItem="mw9-Hw-NcS" secondAttribute="centerX" id="cdQ-Qd-bLs"/>
                             <constraint firstItem="ygh-lq-LbL" firstAttribute="top" secondItem="tq5-Il-eFo" secondAttribute="bottom" constant="60" id="dwh-GP-Or6"/>
-                            <constraint firstItem="441-vn-K7h" firstAttribute="centerX" secondItem="dtp-nf-wGL" secondAttribute="centerX" id="jto-IK-o22"/>
                             <constraint firstItem="mw9-Hw-NcS" firstAttribute="centerX" secondItem="ree-LY-PMr" secondAttribute="centerX" id="lBa-f4-bI6"/>
                             <constraint firstItem="441-vn-K7h" firstAttribute="top" secondItem="mw9-Hw-NcS" secondAttribute="bottom" constant="71" id="pob-BO-aWT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o0B-ZG-IpM"/>
+                    <connections>
+                        <outlet property="cashImage2" destination="dOu-da-VYc" id="Zwk-Kv-YHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZh-y4-taZ" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +129,10 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80c-vu-xpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wYx-MF-mcT">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="447" y="77"/>
         </scene>
@@ -144,7 +146,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="USV-3u-zn4" customClass="myTableViewCell" customModule="pretium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="USV-3u-zn4" id="fEa-yI-0Ds" userLabel="myCellLabel">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -258,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="1850" y="-8"/>
         </scene>
-        <!--decisionController-->
+        <!--Decision Controller-->
         <scene sceneID="vgu-vV-0at">
             <objects>
-                <viewController title="decisionController" id="3UQ-42-OBM" customClass="decisionController" customModule="pretium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3UQ-42-OBM" customClass="decisionController" customModule="pretium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ogL-wf-VJQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ucc-9Z-0T6"/>
@@ -302,7 +304,10 @@
             <point key="canvasLocation" x="2533" y="57"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo2.png" width="241" height="145"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YAz-J5-J8I"/>
+        <segue reference="Y9J-bx-bqE"/>
     </inferredMetricsTieBreakers>
 </document>
