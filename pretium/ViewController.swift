@@ -38,14 +38,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var newImage: UIImage
         if let possibleImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             newImage = possibleImage
-            readText(scaleImage(newImage, maxDimension: 640))
         } else {
             print("Error")
             return
         }
+        readText(scaleImage(newImage, maxDimension: 640))
         dismissViewControllerAnimated(true, completion: {
-            self.performSegueWithIdentifier("showPrices", sender: nil)
+                self.performSegueWithIdentifier("showPrices", sender: nil)
         })
+
+        
+    
     }
     
     
@@ -72,6 +75,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func readText(image:UIImage){
+        let progressHUD = ProgressHUD(text: "Analyzing Photo")
+        view.addSubview(progressHUD)
         let tesseract = G8Tesseract()
         tesseract.language = "eng"
         tesseract.engineMode = .TesseractCubeCombined
@@ -124,6 +129,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         // Do any additional setup after loading the view, typically from a nib.
     }

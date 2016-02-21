@@ -32,14 +32,13 @@ class myTableViewController: UITableViewController {
     
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.editing=true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         tableView.allowsMultipleSelectionDuringEditing=true
+//        self.tableView.backgroundColor = UIColor(red: 142.0/255, green: 23.0/255, blue: 37.0/255, alpha: 1.0)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -78,6 +77,7 @@ class myTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as! myTableViewCell
         
         cell.cellLabel.text=prices[indexPath.row] //populates cells
+//        cell.contentView.backgroundColor = UIColor(red: 142.0/255, green: 23.0/255, blue: 37.0/255, alpha: 1.0)
         
 
         return cell

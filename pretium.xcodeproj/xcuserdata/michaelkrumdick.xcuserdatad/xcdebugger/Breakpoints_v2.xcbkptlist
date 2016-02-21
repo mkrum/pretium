@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pretium/ViewController.swift"
-            timestampString = "477696088.874744"
+            timestampString = "477730802.648508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "cleanString(_:)"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "scaleImage(_:maxDimension:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -33,38 +33,6 @@
             endingLineNumber = "26"
             landmarkName = "takePicture()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "pretium.ViewController.takePicture (pretium.ViewController)() -&gt; ()"
-                  moduleName = "pretium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michaelkrumdick/Desktop/foc/pretium/pretium/ViewController.swift"
-                  timestampString = "477690182.461757"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "1013">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "pretium.ViewController.(takePicture (pretium.ViewController) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "pretium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michaelkrumdick/Desktop/foc/pretium/pretium/ViewController.swift"
-                  timestampString = "477690182.461998"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,13 +42,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pretium/ViewController.swift"
-            timestampString = "477697797.230472"
+            timestampString = "477730802.648508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "scaleImage(_:maxDimension:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pretium/ViewController.swift"
+            timestampString = "477731046.071141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pretium.ViewController.imagePickerController (pretium.ViewController)(__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()"
+                  moduleName = "pretium"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaelkrumdick/Desktop/foc/pretium/pretium/ViewController.swift"
+                  timestampString = "477731046.078641"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "762">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pretium.ViewController.(imagePickerController (pretium.ViewController) -&gt; (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "pretium"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaelkrumdick/Desktop/foc/pretium/pretium/ViewController.swift"
+                  timestampString = "477731046.07996"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

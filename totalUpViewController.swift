@@ -2,7 +2,7 @@
 //  totalUpViewController.swift
 //  pretium
 //
-//  Created by Luke Duane on 2/20/16.
+//  Created by Luke "Thunderous Menace" Duane on 2/20/16.
 //  Copyright © 2016 ndSophware. All rights reserved.
 //
 
@@ -150,6 +150,11 @@ class totalUpViewController: UIViewController {
                 decisionController.prices=prices
             }
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor=UIColor(red: 142.0/255, green: 23.0/255, blue: 37.0/255, alpha: 1.0)
         
     }
 }

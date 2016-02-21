@@ -168,6 +168,7 @@
 				38B78E221C79077800DAB0C2 /* myTableViewCell.swift */,
 				38B78E231C79077800DAB0C2 /* myTableViewController.swift */,
 				38B78E241C79077800DAB0C2 /* totalUpViewController.swift */,
+				38272C7B1C7989D00075B07D /* ProgressHUD.swift */,
 				D7C6A8711C7939ED00519C2E /* decisionController.swift */,
 				38B78E251C79077800DAB0C2 /* ViewController.swift */,
 				37974BBE1C79092500A4A08B /* startViewController.swift */,
@@ -265,7 +266,7 @@
 				TargetAttributes = {
 					38DD82BA1C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 2Q9637WMHC;
+						DevelopmentTeam = 7YA2TTA92F;
 					};
 					38DD82D11C781FE0001C1104 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -337,6 +338,7 @@
 				38B78E2C1C79077800DAB0C2 /* ViewController.swift in Sources */,
 				3767D12E1C79735D0093355E /* Customer.swift in Sources */,
 				37974BBF1C79092500A4A08B /* startViewController.swift in Sources */,
+				38272C7C1C7989D00075B07D /* ProgressHUD.swift in Sources */,
 				38B78E271C79077800DAB0C2 /* AppDelegate.swift in Sources */,
 				38DD82C71C781FE0001C1104 /* pretium.xcdatamodeld in Sources */,
 				3767D1331C79735D0093355E /* NSEClient.swift in Sources */,
@@ -503,7 +505,7 @@
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = me.dkerriga.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LukeDuane.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
@@ -527,7 +529,7 @@
 				INFOPLIST_FILE = pretium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = me.dkerriga.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LukeDuane.pretium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pretium-Bridging-Header.h";
